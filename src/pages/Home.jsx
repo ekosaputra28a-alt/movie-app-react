@@ -1,4 +1,5 @@
 import MovieCard from "../components/MovieCard";
+import "../styles/movie.css";
 
 const dummyMovies = [
   {
@@ -29,18 +30,12 @@ const dummyMovies = [
 
 function Home() {
   return (
-    <main style={{ padding: "24px" }}>
+    <main>
       <h2 style={{ color: "white", marginBottom: "16px" }}>
         Popular Movies
       </h2>
 
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fill, minmax(150px, 1fr))",
-          gap: "16px",
-        }}
-      >
+      <div className="movie-grid">
         {dummyMovies.map((movie) => (
           <MovieCard
             key={movie.id}

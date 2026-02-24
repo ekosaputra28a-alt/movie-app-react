@@ -1,11 +1,12 @@
 .movie-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 16px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
 }
 
 .movie-card {
-    background-color: #1f2937;
+    position: relative;        /* WAJIB */
+    background-color: transparent;  /* ganti dari #1f2937 */
     color: white;
     border-radius: 10px;
     overflow: hidden;
@@ -18,8 +19,7 @@
 
 .movie-card img {
     width: 100%;
-    height: 220px;
-    object-fit: cover;
+    display: block;
 }
 
 .movie-info {
@@ -34,3 +34,4 @@
 .movie-info p {
     color: #facc15;
 }
+
