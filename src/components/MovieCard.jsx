@@ -1,8 +1,8 @@
 import "../styles/movie.css";
 
-function MovieCard({ title, rating, image }) {
+function MovieCard({ title, rating, image, onClick }) {
   return (
-    <div className="movie-card">
+    <div className="movie-card" onClick={onClick}>
       <img src={image} alt={title} />
       <div className="movie-info">
         <h3>{title}</h3>
