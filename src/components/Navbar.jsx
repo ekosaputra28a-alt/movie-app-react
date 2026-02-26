@@ -1,24 +1,42 @@
+import { useState } from "react";
 import "../styles/navbar.css";
 
 function Navbar() {
+  const [open, setOpen] = useState(false);
+
   return (
-    <nav className="navbar">
-      <h1 className="logo">MovieApp</h1>
+    <>
+      <nav className="navbar">
+        <h1 className="logo">MovieApp</h1>
 
-      {/* NAV LINKS di tengah */}
-      <ul className="nav-links">
-        <li>Home</li>
-        <li>TV Shows</li>
-        <li>Movies</li>
-        <li>Popular</li>
-      </ul>
+        <ul className="nav-links">
+          <li>Home</li>
+          <li>TV Shows</li>
+          <li>Movies</li>
+          <li>Popular</li>
+        </ul>
 
-      {/* Kanan: Search + Settings */}
-      <div className="nav-right">
-        <input type="text" placeholder="Search movie..." />
-        <button className="navbar-settings" title="Settings">⚙️</button>
+        <div className="nav-right">
+          <input type="text" placeholder="Search movie..." />
+          <button 
+            className="navbar-settings"
+            onClick={() => setOpen(true)}
+          >
+            ⚙️
+          </button>
+        </div>
+      </nav>
+
+      {open && <div className="overlay" onClick={() => setOpen(false)}></div>}
+      
+      <div className={`sidebar ${open ? "active" : ""}`}>
+        <button className="close-btn" onClick={() => setOpen(false)}>✖</button>
+        <h3>Settings</h3>
+        <p>Profile</p>
+        <p>Theme</p>
+        <p>Language</p>
       </div>
-    </nav>
+    </>
   );
 }
 
