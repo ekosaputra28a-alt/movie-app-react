@@ -6,32 +6,42 @@ function Navbar() {
 
   return (
     <>
+      {/* NAVBAR */}
       <nav className="navbar">
         <h1 className="logo">MovieApp</h1>
 
-        <ul className="nav-links">
-          <li>Home</li>
-          <li>TV Shows</li>
-          <li>Movies</li>
-          <li>Popular</li>
-        </ul>
-
         <div className="nav-right">
-          <input type="text" placeholder="Search movie..." />
-          <button 
+          <input type="text" placeholder="Search" />
+          <button
             className="navbar-settings"
             onClick={() => setOpen(true)}
+            aria-label="Open settings"
           >
             ⚙️
           </button>
         </div>
       </nav>
 
-      {open && <div className="overlay" onClick={() => setOpen(false)}></div>}
-      
-      <div className={`sidebar ${open ? "active" : ""}`}>
-        <button className="close-btn" onClick={() => setOpen(false)}>✖</button>
+      {/* OVERLAY */}
+      {open && (
+        <div
+          className="overlay"
+          onClick={() => setOpen(false)}
+        />
+      )}
+
+      {/* BOTTOM SHEET (iOS STYLE) */}
+      <div className={`bottom-sheet ${open ? "active" : ""}`}>
+        <button
+          className="close-btn"
+          onClick={() => setOpen(false)}
+          aria-label="Close settings"
+        >
+          ✕
+        </button>
+
         <h3>Settings</h3>
+
         <p>Profile</p>
         <p>Theme</p>
         <p>Language</p>

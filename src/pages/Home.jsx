@@ -76,6 +76,41 @@ const dummyMovies = [
     image: "https://image.tmdb.org/t/p/w500/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg",
     description: "A poor family schemes to become employed by a wealthy household...",
   },
+  {
+    id: 1,
+    title: "Avengers: Endgame",
+    rating: 8.4,
+    image: "https://image.tmdb.org/t/p/w500/or06FN3Dka5tukK1e9sl16pB3iy.jpg",
+    description: "After the devastating events of Infinity War...",
+  },
+  {
+    id: 2,
+    title: "Interstellar",
+    rating: 8.6,
+    image: "https://image.tmdb.org/t/p/w500/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg",
+    description: "A team of explorers travel through a wormhole in space...",
+  },
+  {
+    id: 3,
+    title: "Inception",
+    rating: 8.8,
+    image: "https://image.tmdb.org/t/p/w500/edv5CZvW6WMUDux911r6m7haRef0WH.jpg",
+    description: "A thief who steals corporate secrets through dream-sharing...",
+  },
+  {
+    id: 4,
+    title: "The Dark Knight",
+    rating: 9.0,
+    image: "https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg",
+    description: "Batman raises the stakes in his war on crime...",
+  },
+  {
+    id: 5,
+    title: "Parasite",
+    rating: 8.5,
+    image: "https://image.tmdb.org/t/p/w500/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg",
+    description: "A poor family schemes to become employed by a wealthy household...",
+  },
 ];
 
 function Home() {
